@@ -9,35 +9,39 @@
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
 // user input
-const pricePerKm = 0.21;
-
+let pricePerKm = 0.21;
+// form
 // kilometers to cover
-const kiloMeters =
+let kiloMetersInput = document.getElementById("kilometres");
+
 
 // user age
-const userAge = 
-console.log(kiloMeters, userAge, typeof(kiloMeters), typeof(userAge))
+let userAgeInput = document.getElementById("user-age");
+// btn
+let buttonSubmit = document.getElementById("cta");
+buttonSubmit.addEventListener("click", function(){
+    let kiloMeters = parseInt(kiloMetersInput.value);
+    let userAge = parseInt(userAgeInput.value);
+    let ticketPrice = kiloMeters * pricePerKm;
+    console.log(ticketPrice)
+    // discounts
+    let childDiscount  = ticketPrice * 0.2;
+    let oldDiscount  = ticketPrice * 0.4;
 
-// adult price
-let ticketPrice = kiloMeters * pricePerKm;
+    //child price senior price
+    const ticketChildPrice = ticketPrice - childDiscount;
+    const ticketOldPrice = ticketPrice - oldDiscount;
 
-// discounts
-let childDiscount  = ticketPrice * 0.2;
-let oldDiscount  = ticketPrice * 0.4;
-
-//child price senior price
-const ticketChildPrice = ticketPrice - childDiscount;
-const ticketOldPrice = ticketPrice - oldDiscount;
-
-// data elaboration
-if(userAge <= 18){
-    ticketPrice = ticketChildPrice.toFixed(2);
-}
-else if(userAge >= 65){
-    ticketPrice = ticketOldPrice.toFixed(2);
-}
-else{
-   ticketPrice = ticketPrice.toFixed(2);
-}
-console.log(ticketPrice, typeof(ticketPrice))
-// output
+    // data elaboration
+    if(userAge <= 18){
+        ticketPrice = ticketChildPrice.toFixed(2);
+    }
+    else if(userAge >= 65){
+        ticketPrice = ticketOldPrice.toFixed(2);
+    }
+    else{
+    ticketPrice = ticketPrice.toFixed(2);
+    }
+    // output
+    document.getElementById("ticket-price").innerHTML += ticketPrice + "$";
+})
