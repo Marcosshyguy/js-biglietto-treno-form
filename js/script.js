@@ -42,6 +42,9 @@ buttonSubmit.addEventListener("click", function(){
     else{
     ticketPrice = ticketPrice.toFixed(2);
     }
+    // reset
+    userAgeInput.value = ""
+    kiloMetersInput.value = ""
     // output
-    document.getElementById("ticket-price").innerHTML += ticketPrice + "$";
+    document.getElementById("ticket-price").innerHTML = "Il prezzo del ticket é:" + ticketPrice + "$";
 })
