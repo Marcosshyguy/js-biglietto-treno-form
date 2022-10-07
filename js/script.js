@@ -14,37 +14,40 @@ let pricePerKm = 0.21;
 // kilometers to cover
 let kiloMetersInput = document.getElementById("kilometres");
 
-
 // user age
-let userAgeInput = document.getElementById("user-age");
+let userAgeInput = parseInt((document.getElementById("user-age")).value);
+console.log(userAgeInput)
+// add Event
 // btn
-let buttonSubmit = document.getElementById("cta");
-buttonSubmit.addEventListener("click", function(){
-    let kiloMeters = parseInt(kiloMetersInput.value);
-    let userAge = parseInt(userAgeInput.value);
-    let ticketPrice = kiloMeters * pricePerKm;
-    console.log(ticketPrice)
-    // discounts
-    let childDiscount  = ticketPrice * 0.2;
-    let oldDiscount  = ticketPrice * 0.4;
+// let buttonSubmit = document.getElementById("cta");
+// buttonSubmit.addEventListener("click", function(){
 
-    //child price senior price
-    const ticketChildPrice = ticketPrice - childDiscount;
-    const ticketOldPrice = ticketPrice - oldDiscount;
+//     let kiloMeters = parseInt(kiloMetersInput.value);
+//     let userAge = parseInt(userAgeInput.value);
 
-    // data elaboration
-    if(userAge <= 18){
-        ticketPrice = ticketChildPrice.toFixed(2);
-    }
-    else if(userAge >= 65){
-        ticketPrice = ticketOldPrice.toFixed(2);
-    }
-    else{
-    ticketPrice = ticketPrice.toFixed(2);
-    }
-    // reset
-    userAgeInput.value = ""
-    kiloMetersInput.value = ""
-    // output
-    document.getElementById("ticket-price").innerHTML = "Il prezzo del ticket é:" + ticketPrice + "$";
-})
+//     let ticketPrice = kiloMeters * pricePerKm;
+//     console.log(ticketPrice)
+//     // discounts
+//     let childDiscount  = ticketPrice * 0.2;
+//     let oldDiscount  = ticketPrice * 0.4;
+
+//     //child price senior price
+//     const ticketChildPrice = ticketPrice - childDiscount;
+//     const ticketOldPrice = ticketPrice - oldDiscount;
+
+//     // data elaboration
+//     if(userAge <= 18){
+//         ticketPrice = ticketChildPrice.toFixed(2);
+//     }
+//     else if(userAge >= 65){
+//         ticketPrice = ticketOldPrice.toFixed(2);
+//     }
+//     else{
+//     ticketPrice = ticketPrice.toFixed(2);
+//     }
+//     // reset
+//     userAgeInput.value = ""
+//     kiloMetersInput.value = ""
+//     // output
+//     document.getElementById("ticket-price").innerHTML = "Il prezzo del ticket é:" + ticketPrice + "$";
+// })
