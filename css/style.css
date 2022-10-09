@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+} 
+
+body{
+    background-color: red;
+}
+
+/* utilities */
+/* spacing */
+.main-conatiner{
+    width: 70%;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.mgb-2{
+    margin-bottom: 2rem;
+}
+
+.d-none{
+    display: none;
+}
+
+/* typography */
+.txt-uppercase{
+    text-transform: uppercase;
+}
+
+.txt-left{
+    text-align: left;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+
+
+
+/* color bg */
+.white{
+    color: white;
+}
+
+.main-red{
+    color: #B91547;
+}
+
+.main-bg{
+    background-color: #B91547;
+}
+
+.bg-gray{
+    background-color: #757575;
+}
+
+/* form */
+.input-data,
+.output-data{
+    padding: 1em;
+    background-color: white;
+    border-radius: 2em;
+}
+
+
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.card-form{
+    width:calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+    height: 100%;
+}
+
+
+/* ticket */
+.ticket{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.card-ticket{
+    padding:1rem;
+}
+.ticket > .card-ticket{
+    width: 20%;
+    
+}
+
+.ticket-info{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px #757575 solid;
+    border-right-color: transparent;
+}
+
+.ticket-info .card-ticket{
+}
+

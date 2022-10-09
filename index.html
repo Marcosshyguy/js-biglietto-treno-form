@@ -7,24 +7,85 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Biglietto treno</title>
 </head>
-<body>
+<body class="main-bg">
     <!-- <h1 id="ticket-price">Il tuo biglietto costa: </h1> -->
-    <h1>Biglietto treno</h1>
-
-    <div id="form">
-        <div>
-            <label for="kilometres">How many kms are you going to cover?</label>
-            <input type="text" id="kilometres">
+    <div class="main-conatiner txt-center">
+        <h2 class="txt-uppercase mgb-2 white">calcola il prezzo del tuo biglietto</h2>
+        <div class="input-data mgb-2">
+            <div id="form" class="form">
+                <div class="card-form">
+                    <label for="kilometres" class="main-red">Km da percorrere</label>
+                    <input type="text" id="kilometres">
+                </div>
+                <div class="card-form">
+                    <label for="user-name" class="main-red">Come ti chiami?</label>
+                    <input type="text" id="user-name">
+                </div>
+                <div class="card-form">
+                <label for="user-age" class="main-red">Fascia d'età</label>
+                    <!-- <input type="text" id="user-age"> -->
+                    <select id="user-age">
+                        <option value=""></option>
+                        <option value="minor">Minorenne</option>
+                        <option value="adult">Adulto</option>
+                        <option value="senior">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-form">
+                <button id="cta">Genera</button>
+                <button id="cancel-btn">Annulla</button>
+            </div>
         </div>
-        <div>
-            <label for="user-age">How old are you?</label>
-            <input type="text" id="user-age">
+        
+        <h2 class="txt-uppercase mgb-2 white">il tuo biglietto</h2>
+        <div id="output-data" class="output-data d-none">
+            <h3 class="txt-uppercase txt-left">Dettagli passeggero</h3>
+            <div class="ticket">
+                <div class="card-ticket bg-gray">
+                        <h5 class="txt-uppercase">Nome passeggero</h5>
+                        <p id="passenger-name" class=""></p>
+                </div>
+                <div class="ticket-info">
+                    <div class="card-ticket">
+                        <div>
+                            <p><strong>Offerta</strong></p>
+                        </div>
+                        <div>
+                            <p id="offerta"></p>
+                        </div>
+                    </div>
+                    <div class="card-ticket">
+                        <div>
+                            <p><strong>Carrozza</strong></p>
+                        </div>
+                        <div>
+                            <p id="train-wagon"></p>
+                        </div>
+                    </div>
+                    <div class="card-ticket">
+                        <div>
+                            <p><strong>Codice cp</strong></p>
+                        </div>
+                        <div>
+                            <p id="cp-code"></p>
+                        </div>
+                    </div>
+                    <div class="card-ticket">
+                        <div>
+                            <p ><strong>Costo biglietto</strong></p>
+                        </div>
+                        <div>
+                            <p id="ticket-price"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button id="cta">Calcola prezzo</button>
     </div>
 
+        
 
-    <p id="ticket-price">Il tuo biglietto viene:</p>
 
 
 
