@@ -98,7 +98,6 @@ buttonSubmit.addEventListener("click", function(){
 })
 
 // cancel listenr
-if()
 buttonCancel.addEventListener("click", function(){
     kiloMetersInput.value = "";
     userNameInput.value = "";
